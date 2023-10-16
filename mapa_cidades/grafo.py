@@ -1,5 +1,6 @@
 from mapa_cidades.adjacente import Adjacente
 from mapa_cidades.vertice import Vertice
+from mapa_cidades.vetor_ordenado import OrderedVector
 
 
 class Grafo:
@@ -67,3 +68,11 @@ class Grafo:
 
 grafo = Grafo()
 grafo.bucharest.mostra_adjacentes()
+
+vector = OrderedVector(5)
+vector.insert(grafo.arad)
+vector.insert(grafo.craiova)
+vector.insert(grafo.bucharest)
+vector.insert(grafo.dobreta)
+vector.insert(grafo.lugoj)
+vector.print()
