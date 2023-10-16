@@ -1,47 +1,55 @@
 import numpy as np
 
-class VetorOrdenado:
-    def __init__(self, capacidade) -> None:
-        self.capacidade = capacidade
-        self.ultima_posicao = -1
-        self.valores = np.empty(self.capacidade, dtype=int)
+
+class OrderedVector:
+    def __init__(self, capacity) -> None:
+        self.capacity = capacity
+        self.last_position = -1
+        self.values = np.empty(self.capacity, dtype=int)
 
     # O(n)
-    def imprime(self):
-        if self.ultima_posicao == -1:
+    def print(self):
+        if self.last_position == -1:
             print('O vetor esta vazio')
         else:
-            for i in range(self.ultima_posicao + 1):
-                print(i, ' -> ', self.valores[i])
+            for i in range(self.last_position + 1):
+                print(i, ' -> ', self.values[i])
 
     # O(n)
-    def insere(self, valor):
-        if self.ultima_posicao == self.capacidade - 1:
+    def insert(self, value):
+        if self.last_position == self.capacity - 1:
             print('Capacidade maxima atingida')
             return
-    
-        posicao = 0
-        for i in range(self.ultima_posicao + 1):
-            posicao = i
-            if self.valores[i] > valor:
+
+        posicao = self.__get_position(value)
+        self.__change_positions(posicao)
+
+        self.values[posicao] = value
+        self.last_position += 1
+
+    def __get_position(self, valor):
+        position = 0
+        for i in range(self.last_position + 1):
+            position = i
+            if self.values[i] > valor:
                 break
-            if i == self.ultima_posicao:
-                posicao = i + 1
+            if i == self.last_position:
+                position = i + 1
+        return position
 
-        ultima_posicao = self.ultima_posicao
-        while ultima_posicao >= posicao:
-            self.valores[ultima_posicao + 1] = self.valores[ultima_posicao]
-            ultima_posicao -= 1
+    def __change_positions(self, position):
+        last_position = self.last_position
+        while last_position >= position:
+            self.values[last_position + 1] = self.values[last_position]
+            last_position -= 1
 
-        self.valores[posicao] = valor
-        self.ultima_posicao += 1
-            
-vetor = VetorOrdenado(10)
-vetor.insere(6)
-vetor.insere(4)
-vetor.insere(3)
-vetor.insere(5)
-vetor.insere(1)
-vetor.insere(8)
-vetor.insere(2)
-vetor.imprime()
+
+vector = OrderedVector(10)
+vector.insert(6)
+vector.insert(4)
+vector.insert(3)
+vector.insert(5)
+vector.insert(1)
+vector.insert(8)
+vector.insert(2)
+vector.print()
