@@ -1,6 +1,5 @@
-from mapa_cidades.grafo import grafo
-from mapa_cidades.vetor_ordenado import OrderedVector
-from mapa_cidades.vetor_ordenado_adjacente import AdjacentOrderedVector
+from algoritmos_de_busca.mapa_cidades.grafo import grafo
+from algoritmos_de_busca.mapa_cidades.vetor_ordenado_adjacente import AdjacentOrderedVector
 
 
 # Algoritmo de busca AEstrela ou A*

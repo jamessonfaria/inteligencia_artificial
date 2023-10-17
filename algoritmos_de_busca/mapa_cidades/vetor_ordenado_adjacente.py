@@ -1,7 +1,5 @@
 import numpy as np
 
-from mapa_cidades.grafo import grafo
-
 
 class AdjacentOrderedVector:
     def __init__(self, capacity) -> None:

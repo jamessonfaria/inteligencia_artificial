@@ -1,6 +1,6 @@
-from mapa_cidades.adjacente import Adjacente
-from mapa_cidades.vertice import Vertice
-from mapa_cidades.vetor_ordenado import OrderedVector
+from algoritmos_de_busca.mapa_cidades.adjacente import Adjacente
+from algoritmos_de_busca.mapa_cidades.vertice import Vertice
+from algoritmos_de_busca.mapa_cidades.vetor_ordenado import OrderedVector
 
 
 class Grafo:

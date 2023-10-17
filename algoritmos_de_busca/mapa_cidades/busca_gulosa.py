@@ -1,5 +1,5 @@
-from mapa_cidades.grafo import grafo
-from mapa_cidades.vetor_ordenado import OrderedVector
+from algoritmos_de_busca.mapa_cidades.grafo import grafo
+from algoritmos_de_busca.mapa_cidades.vetor_ordenado import OrderedVector
 
 
 class BuscaGulosa:
