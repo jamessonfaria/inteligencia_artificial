@@ -1,4 +1,5 @@
-from algoritmos_de_otimizacao.calendario_voos import hill_climb, fitness_function, simulated_annealing
+from algoritmos_de_otimizacao.calendario_voos import hill_climb, fitness_function, simulated_annealing, \
+    algoritmo_genetico
 
 
 def imprimir_voos(agenda):
@@ -44,4 +45,8 @@ imprimir_voos(melhor_solucao)
 
 print("---------solucao usando o Simulated Annealing ------------------")
 melhor_solucao, melhor_custo = simulated_annealing.get_solucao(problema)
+imprimir_voos(melhor_solucao)
+
+print("---------solucao usando o Algoritmo Genetico ------------------")
+melhor_solucao, melhor_custo = algoritmo_genetico.get_solucao(problema)
 imprimir_voos(melhor_solucao)
