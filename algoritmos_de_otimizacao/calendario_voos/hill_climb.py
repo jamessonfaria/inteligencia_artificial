@@ -5,4 +5,4 @@ import mlrose
 
 
 def get_solucao(problema):
-    return mlrose.hill_climb(problema, random_state=3)
+    return mlrose.hill_climb(problema, random_state=1)
