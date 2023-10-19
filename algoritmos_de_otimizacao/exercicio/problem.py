@@ -5,14 +5,12 @@ sys.modules['sklearn.externals.six'] = six
 import mlrose
 
 
-def print_solution(solution):
-    total = 0
+def print_solution(solution, cost):
     for i in range(len(solution)):
         if solution[i] == 1:
-            total += products[i][2]
             print('%s - %s' % (products[i][0], products[i][2]))
 
-    print('Total >>>> %s' % (total))
+    print('Max Cost >>>> %s' % cost)
 
 
 products = [('Refrigerador A', 0.751, 999.90),
