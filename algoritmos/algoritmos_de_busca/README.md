@@ -1,5 +1,5 @@
 # Algoritmos de Busca
-* Resolover problemas usando os algoritmos de busca, os componentes para uma busca são "1- estado inicial, 2- estado final, 3- espaço de estados, 4- ações para passar de um estado para o outro, 5- solução que leva do estado inicial ate o final". Ex: Encontrar a menor rota para ir de uma cidade até outra. Escolher qual a melhor jogada
+* Resolover problemas usando os algoritmos de busca, os componentes para uma busca são "1- estado inicial, 2- estado final, 3- espaço de estados, 4- ações para passar de um estado para o outro, 5- solução que leva do estado inicial ate o final". Algoritmos de busca em inteligência artificial são técnicas computacionais que permitem encontrar soluções para problemas por meio da exploração sistemática de um espaço de busca, que é um conjunto de estados ou configurações possíveis. Esses algoritmos são fundamentais para resolver uma ampla variedade de problemas em IA, como encontrar caminhos em mapas, planejar trajetórias de robôs, otimizar recursos, entre outros. Ex: Encontrar a menor rota para ir de uma cidade até outra. Escolher qual a melhor jogada
 
 ![()](../../imagens/algoritmos_de_busca.png)
 
