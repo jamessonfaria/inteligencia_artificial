@@ -1,5 +1,5 @@
 # Método - Associação
-* Fazer agrupamento baseado em dados históricos, vai buscar realizar a geração de regras por associação utilizando aprendizado de maquina para encontrar um padrão nos dados.
+* Fazer associação baseada em dados históricos, vai buscar realizar a geração de regras por associação utilizando aprendizado de maquina para encontrar um padrão nos dados.
 Ex: Definição das prateleiras de um supermerado, o famoso exemplo da frauda ao lado da cerveja.
 
 ![()](../../../imagens/associacao1.PNG)
