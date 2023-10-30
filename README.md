@@ -1,5 +1,5 @@
 # Inteligencia Artificial
 
-![()](./imagens/visao_geral.png)
+![()](./imagens/visao_geral.PNG)
 
-![()](./imagens/terminologia.png)
+![()](./imagens/terminologia.PNG)
