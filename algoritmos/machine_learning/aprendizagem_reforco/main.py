@@ -64,4 +64,32 @@ execution_time = end_time - start_time
 print(f"Tempo de execução: {execution_time} segundos")
 print('Treinamento concluido.')
 
-print(q_table)
+
+############  Avaliação
+total_penalidades = 0
+episodios = 50
+frames = []
+
+for _ in range(episodios):
+  estado = env.reset()
+  estado = estado[0]
+  penalidades, recompensa = 0, 0
+  done = False
+  while not done:
+    acao = np.argmax(q_table[estado])
+    estado, recompensa, done, info, _ = env.step(acao)
+
+    if recompensa == -10:
+      penalidades += 1
+
+    frames.append({
+        'frame': env.render(),
+        'state': estado,
+        'action': acao,
+        'reward': recompensa
+    })
+
+  total_penalidades += penalidades
+
+print('Episódios', episodios)
+print('Penalidades', total_penalidades)
